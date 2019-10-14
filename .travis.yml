@@ -6,8 +6,9 @@ services:
 env:
   global:
      -secure: ciVNMQFEn5JiFCEjiyyJByexBsRpjUr34H/kGbWDwvW8jZlV7gfsLfqEwhGSUgs+jpIuG/eExHaknXi6iXIQL2v24wdoMsPeal/KKj4CLyevaMWip6aZElRnhhdzeXVxQJ/B0hgsmPMonwG6mXwwvBOwqDp1MXfl3RrIXP5iiQCfF60Bq2QsL4tF9SbJczvAeBv7RidGDgSUWGNqCR/zQ/obUTtCljIX0sBQ1tQSq+kY78jxYCFSCyKLHoNt1evxHB3EKQA5aR+SlEe+J6HdQRoDyFOqcCo/eg62pNkk68mq4NIWzgY0AiQH3J0GdfbyHgqyAycYoHiJvsooKkCxEHmvpTjo3cpwg/qTXI6Qxi1Bw5Vo0kNOqRkE73uuyOSJUZ9yUH3SBOaWqAsCNPq48xe5NFFMPEmD5+pidGQ24/tWFZAD0AuDZ3p8b+NKZmuP+9K0DgXv3Low4qKzSiySJVrjWwXsQ2TpJM8ED4PG77kgkvJQB/M2BSiL5LXBEAnqAF4PkrI4Kgg5kr8VrQLQxb2XeJyJ3zWLTSG6nQqFQ8dGsbkPn2GwL17Wf5NRmIMQYv/VAE9PpCAsijIV0kGMiAi0t1vpq1zgvlt/cb5Yq9Z2D4R94xBl9fZMZlJ9+R5CinoImuKy2NNrDQpt1gpUKKQYmVQg+lO9w4WAE/iD9Ak=
+  - TEST=texttext
 
 script:
   - docker image build -t test:test1 .
-  - docker run --rm -it test:test1  echo $TESTVAR
+  - docker run --rm -it test:test1  echo $TEST
 
