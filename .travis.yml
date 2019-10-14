@@ -9,6 +9,5 @@ env:
 
 script:
   - docker image build -t test:test1 .
-  - docker run --rm -it test:test1 | echo $TESTVAR
-  - echo $TESTVAR
+  - docker run --rm -it test:test1  echo $TESTVAR
 
